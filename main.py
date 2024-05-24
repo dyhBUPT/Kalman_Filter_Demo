@@ -119,7 +119,7 @@ def get_noisy_observation(x, scale=50):
 
 
 def demo(path=None):
-    gts = np.loadtxt('data/data1.txt', delimiter=',')
+    gts = np.loadtxt('./data1.txt', delimiter=',')
     canvas = np.ones([1120, 2240, 3], dtype=np.uint8) * 255
     kf = KalmanFilter(print_values=True)
 
@@ -148,9 +148,7 @@ def demo(path=None):
         if path is not None:
             out.write(canvas)
 
-    out.release()
-
 
 if __name__ == '__main__':
     demo()
-  
+    
